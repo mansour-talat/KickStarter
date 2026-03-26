@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="signup.css">
+
+</head>
+<body>
+    <header>
+    <nav id="main-nav">
+
+      <div id="logo">
+        <i class="fa-solid fa-rocket rocket-icon"></i>
+        <span><a href="index.html" style="text-decoration: none; color: black; font-size:16px ;">Kickstarter</a></span>
+      </div>
+
+      
+
+      <div id="nav-links">
+        
+        <a href="camps.html" class="login-btn">Campgains</a>
+        <a href="login.html" class="signup-btn">log in</a>
+      </div>
+
+    </nav>
+  </header>
+    <div id="cont">
+        <form id="form">
+            <div id="form-cont">
+            <h2>Sign up</h2>
+             <div class="label">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="name email" id="name">
+            </div>
+            <div class="label">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="email" id="email">
+            </div>
+            
+            
+            <div class="label">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="password" id="password">
+            </div>
+           
+            <button type="submit" id="submit">sign up </button>
+            <p id="wrong-cred" style="display: none; color: red; text-align: center;">Wrong Email Or Password</p>
+            <p id="donthave"> have an account?  <a href="login.html">Login</a></p>
+</div>
+
+        </form>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.min.js"></script>
+<script src="signup.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>camps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="camps.css">
+</head>
+<body>
+    <header>
+    <nav id="main-nav">
+
+      <div id="logo">
+        <i class="fa-solid fa-rocket rocket-icon"></i>
+<span><a href="index.html" style="text-decoration: none; color: black; font-size:16px ;">Kickstarter</a></span> 
+      </div>
+          <input type="search" name="searchcamp" id="searchcamp">
+
+
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div id="nav-links">
+        <ul>
+
+          <li><a href="mycamp.html">My Projects</a></li>
+          <li><a href="makecamp.html">Start a Project</a></li>
+          <li><a href="DonteHistory.html">Dontaion History</a></li>
+
+        </ul>
+        <a href="login.html" id="login-btn" class="login-btn">Log in</a>
+        <a href="signup.html  "  id="signup-btn" class="signup-btn">Sign up</a>
+        <a href="#"  id="logout-bttn" hidden class="signup-btn">logout</a>
+
+      </div>
+
+    </nav>
+  </header>
+  <div id="campaigns"></div>
+  <footer>
+    <p>&copy; 2026 Crowdfunding Platform</p>
+    <div class="social">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+  </script>
+  <script src="camps.js"></script>
+    
+</body>
+</html>

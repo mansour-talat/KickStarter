@@ -1,0 +1,71 @@
+<div id="left">
+            <h1 id="camp-head">Solar-Powered Community Hub</h1>
+
+            <p id="camp-desc">
+                A sustainable space powered by solar energy to support community events and learning.
+            </p>
+
+            <img id="camp-img" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="campaign image">
+
+            <h2>About this project</h2>
+
+            <p id="details">
+                This project aims to build a solar-powered community hub that provides clean
+                energy for events, workshops, and educational programs for local residents.
+            </p>
+
+            <h2>Recent supporters</h2>
+
+            <div id="support">
+
+                <div style="display: flex; align-items: center; justify-content:space-between;  gap :10px">
+                    <div id="avatar">mt</div>
+                    <span id="support-amount" style="color:#1fa463 ;">$50</span>
+
+                </div>
+                  <div style="display: flex; align-items: center; justify-content:space-between;  gap :10px">
+                    <div id="avatar">mt</div>
+                    <span id="support-amount" style="color:#1fa463 ;">$50</span>
+
+                </div>
+                                    <p style="text-align: center;"><a href="#" class="allsupporter">View all supporters</a></p>
+
+                
+                
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <div id="right">
+
+            <div id="top-card">
+
+                <p style="display: flex; justify-content: space-between; align-items: center;">
+                    <span id="pledged" style="font-weight: bolder; font-size: 30px;">1000$</span>
+                    <span id="goal" style="color: #444;"> pledged of <span style="color: #1fa463;">$4000</span></span>
+                </p>
+
+                <progress id="progress" value="1000" max="4000"></progress>
+
+            </div>
+            <div id="progress-update">
+                <p id="percent">75%</p>
+                <p>Backers: <span id="backers">20</span></p>
+
+            </div>
+
+            <hr>
+
+            <div id="days-left">
+                <p>12</p>
+                <p>Days left</p>
+            </div>
+
+            <button id="back-project">Back This Project</button>
+
+        </div>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crowdfunding Platform</title>
+  <meta name="description" content="Crowdfunding platform for creative projects">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+
+    <nav id="main-nav">
+
+      <div id="logo">
+        <i class="fa-solid fa-rocket rocket-icon"></i>
+        <span>Kickstarter</span>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div id="nav-links">
+
+        <ul>
+          <li><a href="#">Discover</a></li>
+          <li><a href="#">Start a Project</a></li>
+        </ul>
+
+        <a href="#" class="login-btn">Log in</a>
+        <a href="#" class="signup-btn">Sign up</a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <section class="content">
+
+    <div class="hero-text">
+
+      <h1>Fund Your <span class="green-text">Ideas</span></h1>
+
+      <p>
+        Bring your creative projects to life with the support of a
+        global community. Start today, share your vision, and make
+        a lasting impact.
+      </p>
+
+      <button class="hero-btn">Start a Campaign</button>
+
+    </div>
+
+    <img src="./assets/img/guest-home.jpg" alt="Crowdfunding hero image" onerror="this.style.display='none'">
+
+  </section>
+
+
+  <section class="camp-head">
+
+    <h2>Featured Campaigns</h2>
+
+    <div id="sec-line">
+      <p>Discover the most exciting projects that are currently seeking funding.</p>
+      <a href="#">View All Campaigns &rsaquo;</a>
+    </div>
+
+  </section>
+
+
+  <section id="campaigns">
+
+    <div class="camp-card">
+      <img src="./assets/img/camp-1.jpg" alt="Smart wearable device" onerror="this.style.display='none'">
+      <div class="card-body">
+        <h3>Smart Wearable Device</h3>
+        <p>Next generation wearable device designed for health tracking.</p>
+        <progress value="50" max="100"></progress>
+        <div class="card-footer">
+          <p class="card-label">Raised</p>
+          <p class="card-label">Ends in</p>
+        </div>
+        <div class="card-footer">
+          <p><span class="bolded">$50,000</span> of $100,000</p>
+          <p><span class="bolded">30</span> days left</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="camp-card">
+      <img src="./assets/img/camp-1.jpg" alt="Eco water bottle" onerror="this.style.display='none'">
+      <div class="card-body">
+        <h3>Eco Water Bottle</h3>
+        <p>Reusable bottle made from sustainable materials.</p>
+        <progress value="75" max="100"></progress>
+        <div class="card-footer">
+          <p class="card-label">Raised</p>
+          <p class="card-label">Ends in</p>
+        </div>
+        <div class="card-footer">
+          <p><span class="bolded">$75,000</span> of $100,000</p>
+          <p><span class="bolded">12</span> days left</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="camp-card">
+      <img src="./assets/img/camp-1.jpg" alt="Smart home assistant" onerror="this.style.display='none'">
+      <div class="card-body">
+        <h3>Smart Home Assistant</h3>
+        <p>AI powered device to control your smart home easily.</p>
+        <progress value="35" max="100"></progress>
+        <div class="card-footer">
+          <p class="card-label">Raised</p>
+          <p class="card-label">Ends in</p>
+        </div>
+        <div class="card-footer">
+          <p><span class="bolded">$35,000</span> of $100,000</p>
+          <p><span class="bolded">20</span> days left</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="camp-card">
+      <img src="./assets/img/camp-1.jpg" alt="Gaming headset" onerror="this.style.display='none'">
+      <div class="card-body">
+        <h3>Pro Gaming Headset</h3>
+        <p>High quality headset built for competitive gamers.</p>
+        <progress value="60" max="100"></progress>
+        <div class="card-footer">
+          <p class="card-label">Raised</p>
+          <p class="card-label">Ends in</p>
+        </div>
+        <div class="card-footer">
+          <p><span class="bolded">$60,000</span> of $100,000</p>
+          <p><span class="bolded">25</span> days left</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <footer>
+    <p>&copy; 2026 Crowdfunding Platform</p>
+    <div class="social">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+  </script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

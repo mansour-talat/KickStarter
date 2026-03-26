@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+#campaigns{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 25px;
+padding: 100px clamp(20px, 6vw, 100px) 80px;
+}
+#main-nav{
+position: static;
+}
+#searchcamp{
+    padding: 5px 20px;
+    border-radius: 10px;
+    width: 40%;
+}
+.img-wrapper {
+    position: relative;
+}
+
+.img-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+.status {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.status.completed {
+    background-color: #10B76F;
+}
+
+.status.active {
+    background-color: orange;
+}
+.status.expired {
+    background-color: red;
+}

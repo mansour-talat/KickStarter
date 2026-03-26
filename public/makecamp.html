@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Campaign</title>
+<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="makecamp.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav id="main-nav">
+    <div id="logo">
+      <i class="fa-solid fa-rocket" style="color: #16a34a;"></i>
+      <span><a href="index.html" style="text-decoration: none; color: black;">Kickstarter</a></span>
+    </div>
+       <button class="hamburger" aria-label="Toggle menu" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    <div id="nav-links">
+        <ul>
+
+           <li><a href="mycamp.html">My Projects</a></li>
+          <li><a href="makecamp.html">Start a Project</a></li>
+          <li><a href="DonteHistory.html">Dontaion History</a></li>
+
+        </ul>
+        <a href="login.html" id="login-btn" class="login-btn">Log in</a>
+        <a href="signup.html  "  id="signup-btn" class="signup-btn">Sign up</a>
+        <a href="#"  id="logout-bttn" hidden class="signup-btn">logout</a>
+
+    </div>
+  </nav>
+  <div class="header">
+    <h2>Bring your idea to life</h2>
+    <p>Fill in the essential details to start your crowdfunding journey.</p>
+  </div>
+
+  <div id="card">
+    <form>
+
+      <label for="title">Campaign Title</label>
+      <input type="text" id="title" required placeholder="e.g. NextGen Eco-Friendly Water Bottle">
+
+      <div id="sec-row">
+        <div>
+          <label for="deadline">Campaign Deadline</label>
+          <input type="date" required id="deadline">
+        </div>
+
+        <div>
+          <label for="goal">Funding Goal ($)</label>
+          <input type="number" name="goal" required id="goal" placeholder="$ 5,000">
+        </div>
+      </div>
+
+      <label for="desc">Campaign Description</label>
+      <textarea id="desc" required placeholder="Tell the world about your amazing project..."></textarea>
+
+      <label for="banner">Campaign Banner</label>
+      <input type="file" required id="banner">
+
+      <div class="actions">
+        <button type="submit">Launch Campaign 🚀</button>
+      </div>
+
+    </form>
+  </div>
+   <script>
+    function toggleNav() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+  </script>
+<script src="script.js"></script>
+<script src="makecamp.js"></script>
+</body>
+</html>

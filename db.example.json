@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "role": "admin",
+      "password": "$2a$10$O63svoIIRk2r.jHTN5bda.aEHjJ833APJjEd5uEJpRLZs6Sgectz6",
+      "isActive": true
+    }
+
+  ],
+  "campaigns": [],
+  "pledges": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,264 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+#logout {
+    margin: 20px;
+    cursor: pointer;
+}
+#logout:hover {
+    background-color: #10B76F;
+    color: white;
+}
+
+#topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #10B76F;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 300;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#topbar .brand {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+#aside-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    flex-direction: column;
+    gap: 5px;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+#aside-toggle:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+#aside-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+#aside-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+#aside-toggle.open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+#aside-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 150;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#overlay.visible {
+    display: block;
+    opacity: 1;
+}
+
+#aside {
+    width: 220px;
+    height: calc(100vh - 60px);
+    background: #10B76F;
+    color: white;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    padding-top: 16px;
+    z-index: 200;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#aside ul {
+    list-style: none;
+}
+
+#aside ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#aside ul li:hover,
+#aside ul li.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+section {
+    margin-left: 220px;
+    padding: 20px;
+    padding-top: 80px;
+    width: calc(100% - 220px);
+}
+
+#total-users-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    max-width: 100%;
+}
+
+#total-users-card h3 {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+#total-users-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #10B76F;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: #10B76F;
+    color: white;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+tr {
+    border-bottom: 1px solid #eee;
+}
+
+#action {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#status {
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#camps,
+#pledges {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    #aside {
+        width: 180px;
+    }
+
+    section {
+        margin-left: 180px;
+        width: calc(100% - 180px);
+    }
+}
+
+@media (max-width: 768px) {
+
+    #aside-toggle {
+        display: flex;
+    }
+
+    #aside {
+        width: 220px;
+        transform: translateX(-100%);
+        box-shadow: none;
+    }
+
+    #aside.open {
+        transform: translateX(0);
+        box-shadow: 4px 0 24px rgba(0,0,0,0.18);
+    }
+
+    section {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+        padding-top: 75px;
+    }
+
+    #total-users-card {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    #total-users-card p {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}

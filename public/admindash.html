@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin-camp.css">
+</head>
+
+<body>
+
+    <aside id="aside">
+        <ul>
+            
+            <li class="user">Users</li>
+            <li class="camps">Campiagns</li>
+
+        </ul>
+
+        <button id="logout"
+            style="padding: 7px 8px; border: none; background-color: white; color: #10B76F; border-radius: 10px;">
+            Logout
+        </button>
+    </aside>
+
+    <section id="users">
+        <div id="total-users-card">
+            <h3>TOTAL USERS</h3>
+            <p id="usernum"></p>
+        </div>
+
+        <h2>Users</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="table"></tbody>
+        </table>
+    </section>
+
+    <section id="camps">
+        <div class="total-camps" id="total-users-card">
+            <h3>Total Campiagns</h3>
+            <p id="camp-num"></p>
+        </div>
+        <h2>Campiagns</h2>
+        <table id="camp-table">
+            <thead>
+                <tr>
+                    <th>image</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Details</th>
+                    <th>Action</th>
+                    <th>Pledges</th>
+
+
+                </tr>
+            </thead>
+        </table>
+        <dialog id="camp-dialog" class="dialog">
+            <div class="dialog-content">
+
+                <h2>Campaign Details</h2>
+
+                <label>Title</label>
+                <input type="text" id="d-title" readonly>
+
+                <label>Goal</label>
+                <input type="text" id="d-goal" readonly>
+
+                <label>Deadline</label>
+                <input type="text" id="d-deadline" readonly>
+
+                <label>Description</label>
+                <textarea id="d-description" readonly style="resize: none; "></textarea>
+
+                <button id="close-dialog-btn">Close</button>
+            </div>
+        </dialog>
+        <dialog id="pledges-dialog">
+            <h3>Pledges</h3>
+            <div id="pledges-container"></div>
+            <button id="close-pledges-btn">Close</button>
+        </dialog>
+    </section>
+
+    
+    <div id="topbar">
+        <button id="aside-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div id="nav-cont" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+            <span class="brand">Admin</span>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        const toggle = document.getElementById('aside-toggle');
+        const aside = document.getElementById('aside');
+        const overlay = document.getElementById('overlay');
+
+        function openMenu() {
+            aside.classList.add('open');
+            toggle.classList.add('open');
+            overlay.classList.add('visible');
+        }
+
+        function closeMenu() {
+            aside.classList.remove('open');
+            toggle.classList.remove('open');
+            overlay.classList.remove('visible');
+        }
+
+        toggle.addEventListener('click', () =>
+            aside.classList.contains('open') ? closeMenu() : openMenu()
+        );
+
+        overlay.addEventListener('click', closeMenu);
+    </script>
+
+    <script src="admin.js"></script>
+    <script src="admin-camp.js"></script>
+
+
+</body>
+
+</html>

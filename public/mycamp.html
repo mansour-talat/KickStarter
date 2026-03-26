@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My projects</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mycamp.css">
+</head>
+<body>
+    <header>
+    <nav id="main-nav">
+      <div id="logo">
+        <i class="fa-solid fa-rocket rocket-icon"></i>
+<span><a href="index.html" style="text-decoration: none; color: black; font-size:16px ;">Kickstarter</a></span>       </div>
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div id="nav-links">
+        <ul>
+
+          <li><a href="#">My Projects</a></li>
+          <li><a href="makecamp.html">Start a Project</a></li>
+          <li><a href="DonteHistory.html">Dontaion History</a></li>
+
+        </ul>
+        <a href="login.html" id="login-btn" class="login-btn">Log in</a>
+        <a href="signup.html  "  id="signup-btn" class="signup-btn">Sign up</a>
+        <a href="#"  id="logout-bttn" hidden class="signup-btn">logout</a>
+         </div>
+           </nav>
+  </header>
+        <div id="cont">
+      </div>
+   <dialog id="deleteDialog">
+    <p>Are you sure you want to delete this campaign?</p>
+    <button id="confirmDelete">Yes</button>
+    <button id="cancelDelete">No</button>
+</dialog>
+<dialog id="updatedDialog">
+    <form>
+      <label for="title">Campaign Title</label>
+      <input type="text" id="title" required placeholder="e.g. NextGen Eco-Friendly Water Bottle">
+
+      <div id="sec-row">
+        <div>
+          <label for="deadline">Campaign Deadline</label>
+          <input type="date" required id="deadline">
+        </div>
+
+        <div>
+          <label for="goal">Funding Goal ($)</label>
+          <input type="number" name="goal" required id="goal" placeholder="$ 5,000">
+        </div>
+      </div>
+
+      <label for="desc">Campaign Description</label>
+      <textarea id="desc" required placeholder="Tell the world about your amazing project..."></textarea>
+
+      <label for="banner">Campaign Banner</label>
+      <input type="file" required id="banner">
+
+      <div class="actions">
+        <button class="actions-update" type="submit">Launch Campaign 🚀</button>
+        <button class="actions-close">close</button>
+      </div>
+
+    </form>
+</dialog>
+
+  
+ <script>
+    function toggleNav() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+  </script>
+<script src="script.js"></script>
+<script src="mycamp.js"></script>
+</body>
+</html>

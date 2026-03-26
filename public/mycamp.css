@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #10B76F;
+    --primary-dark: #0e9e60;
+    --bg: #f4f7f6;
+    --text: #222;
+    --border: #e0e0e0;
+}
+
+
+#updatedDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 12px;
+    width: 500px;
+    max-width: 92%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+#updatedDialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+#updatedDialog form {
+    padding: 30px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-radius: 12px;
+    max-height: 90vh;       
+    overflow-y: auto;
+}
+
+#updatedDialog label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+}
+
+#updatedDialog input,
+#updatedDialog textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.2s ease;
+    outline: none;
+}
+
+#updatedDialog input:focus,
+#updatedDialog textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(16, 183, 111, 0.15);
+}
+
+#updatedDialog textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+#sec-row {
+    display: flex;
+    gap: 15px;
+}
+
+#sec-row div {
+    flex: 1;
+}
+
+#updatedDialog input[type="file"] {
+    padding: 8px;
+    background: #fafafa;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions-update {
+    flex: 1;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #10B76F, #0e9e60);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.actions-update:hover {
+    filter: brightness(1.1);
+}
+
+.actions-update:active {
+    transform: scale(0.98);
+}
+
+.actions-close {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.actions-close:hover {
+    background: #eee;
+}
+
+#cont {
+    padding: 40px 60px;
+    width: 100%;
+}
+
+.camp-row {
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #f0f0f0;
+    border-left: 6px solid var(--primary);
+    width: 100%;
+    transition: 0.25s;
+}
+
+.camp-row:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 0;           
+}
+
+.camp-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;         
+}
+
+.camp-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;        
+}
+
+.camp-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.status {
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-weight: 600;
+    display: inline-block;
+    color: white;
+    white-space: nowrap;
+}
+
+.status-approved {
+    background: rgba(16, 183, 111, 0.1);
+    color: #10B76F;
+}
+
+.status-pending {
+    background: rgba(243, 156, 18, 0.1);
+    color: #f39c12;
+}
+
+
+.camp-row .actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.camp-row .actions button {
+    padding: 9px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.update {
+    background: linear-gradient(135deg, #10B76F, #0e9e60);
+    color: white;
+}
+
+.update:hover {
+    filter: brightness(1.1);
+}
+
+.delete {
+    background-color: transparent;
+    border: 1px solid #ddd !important;
+    color: #555;
+}
+
+.delete:hover {
+    background-color: #ffe5e5;
+    color: red;
+    border-color: red !important;
+}
+
+
+#deleteDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 12px;
+    padding: 25px 30px;
+    width: 320px;
+    max-width: 92%;
+    text-align: center;
+    margin: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.25s ease;
+}
+
+#deleteDialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+#deleteDialog p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#deleteDialog button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+#confirmDelete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#confirmDelete:hover {
+    background-color: #c0392b;
+}
+
+#cancelDelete {
+    background-color: #ecf0f1;
+    color: #333;
+}
+
+#cancelDelete:hover {
+    background-color: #dcdde1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -48%); }
+    to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+
+@media (max-width: 768px) {
+   
+    #cont {
+        padding: 16px;
+    }
+
+    
+    .camp-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    
+    .left {
+        width: 100%;
+        flex-direction: column;   
+        align-items: flex-start;
+    }
+
+    .camp-img {
+        width: 100%;
+        height: 180px;
+        border-radius: 8px;
+    }
+
+    .camp-title {
+        white-space: normal;
+        font-size: 17px;
+    }
+
+    .camp-row .actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .camp-row .actions button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    #sec-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #updatedDialog form {
+        padding: 20px 16px;
+        gap: 14px;
+    }
+}
