@@ -98,13 +98,18 @@ const signup = document.getElementById("signup-btn");
 const logout = document.getElementById("logout-bttn");
 
 const user = JSON.parse(localStorage.getItem("user"));
-if(user.role=="admin"){
-    window.location.href="admindash.html"
+if (user && user.role === "admin") {
+    window.location.href = "admindash.html";
 }
 if (user) {
     login.style.display = "none";
     signup.style.display = "none";
     logout.style.display = "block";
+}
+if (!user) {
+    document.querySelectorAll(".clicker").forEach(el => {
+        el.style.display = "none";
+    });
 }
 
 logout.addEventListener("click", () => {

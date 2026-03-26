@@ -6,15 +6,16 @@
 
 #cont{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; 
     background-color: rgb(236, 240, 240);
+    padding: 20px; 
 }
 
 #form{
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
 }
@@ -29,9 +30,11 @@
     display: flex;
     flex-direction: column;
     gap :12px;
-    border: none ;
+    border: none;
     width: 25%;
-    padding: 100px 40px;
+    max-width: 420px; 
+    min-width: 280px; 
+    padding: 60px 30px; 
     background-color: white;
     border-radius: 14px;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
@@ -56,7 +59,7 @@ h2{
 }
 
 #submit:hover{
-    background-color:#41cd90 ;
+    background-color:#41cd90;
 }
 
 .password,.email{
@@ -64,9 +67,23 @@ h2{
     background-color:rgb(243, 246, 246);
     padding:10px 7px;
     border-radius: 8px;
-}
+    width: 100%; }
 
 #donthave a{
     text-decoration: none;
     color: #10B76F;
+}
+
+@media (max-width: 480px){
+    #form-cont{
+        width: 100%;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px){
+    #form-cont{
+        width: 80%;
+        padding: 40px 25px;
+    }
 }
